@@ -1,47 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Your Name</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Xin Cheng</title>
 
     <style>
         body {
-            max-width: 850px;
-            margin: 50px auto;
-            padding: 0 25px;
-            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 55px auto;
+            padding: 0 28px;
+
+            font-family:
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Arial,
+                sans-serif;
+
+            font-size: 17px;
             line-height: 1.7;
-            color: #222;
+            color: #333;
         }
 
         header {
-            display: flex;
-            align-items: center;
-            gap: 30px;
-            margin-bottom: 40px;
-        }
-
-        header img {
-            width: 160px;
-            height: 160px;
-            border-radius: 8px;
-            object-fit: cover;
+            margin-bottom: 45px;
         }
 
         h1 {
-            margin-bottom: 5px;
+            margin: 0 0 12px 0;
+            font-size: 42px;
+            font-weight: 600;
+            color: #222;
+        }
+
+        .subtitle {
+            margin: 0;
+            font-size: 19px;
+            color: #555;
         }
 
         h2 {
-            margin-top: 35px;
-            padding-bottom: 6px;
-            border-bottom: 1px solid #ddd;
+            margin-top: 42px;
+            margin-bottom: 18px;
+            padding-bottom: 7px;
+
+            font-size: 27px;
+            font-weight: 500;
+
+            border-bottom: 1px solid #d8d8d8;
         }
 
         a {
-            color: #0969da;
+            color: #3d9fbd;
             text-decoration: none;
         }
 
@@ -49,25 +64,52 @@
             text-decoration: underline;
         }
 
-        .paper {
-            margin-bottom: 18px;
+        .publication {
+            margin-top: 18px;
+            margin-bottom: 28px;
+        }
+
+        .paper-title {
+            display: inline-block;
+            margin-bottom: 4px;
+
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        .authors {
+            margin-bottom: 2px;
+            font-size: 18px;
+        }
+
+        .venue {
+            font-style: italic;
+            font-size: 18px;
+            color: #444;
         }
 
         footer {
-            margin-top: 50px;
-            padding-top: 20px;
-            border-top: 1px solid #ddd;
-            color: #666;
+            margin-top: 55px;
+            padding-top: 18px;
+
+            border-top: 1px solid #d8d8d8;
+
             font-size: 14px;
+            color: #777;
         }
 
         @media (max-width: 600px) {
-            header {
-                display: block;
+            body {
+                margin: 30px auto;
+                font-size: 16px;
             }
 
-            header img {
-                margin-bottom: 20px;
+            h1 {
+                font-size: 34px;
+            }
+
+            h2 {
+                font-size: 24px;
             }
         }
     </style>
@@ -76,73 +118,76 @@
 <body>
 
 <header>
-    <img src="profile.jpg" alt="Profile photo">
+    <h1>Xin Cheng</h1>
 
-    <div>
-        <h1>Your Name</h1>
-        <p>
-            Ph.D. Student in Economics<br>
-            Your University
-        </p>
-
-        <p>
-            <a href="mailto:your-email@example.com">Email</a> ·
-            <a href="https://github.com/your-username">GitHub</a> ·
-            <a href="cv.pdf">CV</a>
-        </p>
-    </div>
+    <p class="subtitle">
+        Master's Student in Theoretical Computer Science
+    </p>
 </header>
+
 
 <section>
     <h2>About Me</h2>
 
     <p>
-        I am a Ph.D. student in economics. My research interests include
-        mechanism design, contract theory, and algorithmic economics.
+        I am currently a master's student at the
+        <a href="https://itcs.sufe.edu.cn/">
+            Institute for Theoretical Computer Science (ITCS)
+        </a>,
+        Shanghai University of Finance and Economics,
+        advised by
+        <a href="https://tomtao26.github.io/">
+            Prof. Yixin Tao
+        </a>.
+    </p>
+
+    <p>
+        I received my bachelor's degree from the
+        University of Electronic Science and Technology of China,
+        where I was fortunate to be advised by
+        <a href="https://en.uestc.edu.cn/info/1074/2103.htm">
+            Prof. Mingyu Xiao
+        </a>.
+    </p>
+
+    <p>
+        My research interests lie broadly in
+        <strong>computational economics</strong> and
+        <strong>algorithmic game theory</strong>.
     </p>
 </section>
 
-<section>
-    <h2>Research</h2>
-
-    <div class="paper">
-        <strong>Paper Title</strong><br>
-        Joint with Coauthor Name.<br>
-        <a href="paper.pdf">Paper</a> ·
-        <a href="#">Abstract</a>
-    </div>
-
-    <div class="paper">
-        <strong>Another Paper Title</strong><br>
-        Working paper.<br>
-        <a href="paper2.pdf">Paper</a>
-    </div>
-</section>
 
 <section>
-    <h2>Teaching</h2>
+    <h2>Publications</h2>
 
-    <p>
-        ECON 101: Introduction to Economics, Teaching Assistant.
-    </p>
-</section>
+    <div class="publication">
 
-<section>
-    <h2>Contact</h2>
-
-    <p>
-        Department of Economics<br>
-        Your University<br>
-        Email:
-        <a href="mailto:your-email@example.com">
-            your-email@example.com
+        <!-- 将 # 换成论文链接；没有链接时也可以暂时保留 -->
+        <a class="paper-title" href="#">
+            Facility Assignment with Fair Cost Sharing:
+            Equilibrium and Mechanism Design
         </a>
-    </p>
+
+        <div class="authors">
+            Mengfan Ma, Tian Bai,
+            <strong>Xin Cheng</strong>,
+            and Mingyu Xiao
+        </div>
+
+        <div class="venue">
+            The 30th International Computing and Combinatorics
+            Conference (<strong>COCOON 2024</strong>)
+        </div>
+
+    </div>
 </section>
+
 
 <footer>
     Last updated: June 2026
 </footer>
 
 </body>
+
 </html>
